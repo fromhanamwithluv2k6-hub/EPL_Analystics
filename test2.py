@@ -1,38 +1,23 @@
 import requests
 import pandas as pd
 from pathlib import Path
+from soccerdata import Understat
 
 BASE = Path(__file__).resolve().parent
-FPL_url = "https://fantasy.premierleague.com/api/bootstrap-static/"
-response = requests.get(FPL_url)
-data = response.json()
+understat = Understat(leagues="ENG-Premier League", seasons="2026/2027",no_cache = True)
 
-with open(BASE/'.gitignore/API_KEY.txt','r',encoding = 'utf-8') as f:
-    API_KEY = f.readline()
-
-def update_teams():
-    url = "https://api.football-data.org/v4/competitions/PL/teams"
-    headers = {"X-Auth-Token": API_KEY}
-    response = requests.get(url, headers=headers)
-
-    if response.status_code == 200:
-        file_csv = BASE/'data/teams.csv'
-        '''df_cur = pd.read_csv(files_csv)
-        df_cur.iloc[0:0].to_csv(file_csv,index = False,encoding = 'utf-8')'''
-        data = response.json()
-        teams = data["teams"]
-        team_names = sorted(t["tla"] for t in teams)
-        team_ids = {name: team_id for team_id, name in enumerate(team_names, start=1)}
-        df = pd.DataFrame([{
-            "Team_id" : team_ids[t["tla"]],
-            "Team": t["name"],
-            "Short Name": t["tla"],
-            "founded": t["founded"],
-            "Home Stadium" : t["venue"],
-            "logo_url" : t["crest"]
-        } for t in teams])
-        df.to_csv(file_csv, index=False, encoding="utf-8")
-        print('done')
+def update_match_stat():
+    file_csv = BASE/'data/match_stat.csv'
+    df = understat.read_team_match_stats()
+    if not df.empty:
+        '''df_cur = pd.read_csv(file_csv)
+        df_cur.iloc[0:0].to_csv(file_csv,index = False,encoding='utf-8-sig')'''
+        cols = ['game_id','home_team_code','away_team_code','home_points',
+                    'home_expected_points','home_goals','home_xg','home_ppda',
+                    'home_deep_completions','away_points','away_expected_points',
+                    'away_xg','away_ppda','away_deep_completions']
+        df[cols].to_csv(file_csv,index=False,encoding='utf-8-sig')
+        print('match_stat updated')
     else:
-        print(f'error {response.status_code}')
-update_teams()
+        return print('match_stat update failed')
+update_match_stat()
