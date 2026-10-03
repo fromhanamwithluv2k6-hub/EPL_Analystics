@@ -1,0 +1,4 @@
+requests
+pandas
+soccerdata
+football_api

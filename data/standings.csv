@@ -1,0 +1,21 @@
+Team_id,Position,Team,Short Name,Played,Won,Draw,Lost,Goals For,Goals Against,Points
+15,1,Manchester City FC,MCI,5,5,0,0,13,5,15
+1,2,Arsenal FC,ARS,5,4,0,1,8,4,12
+3,3,Brighton & Hove Albion FC,BHA,5,3,1,1,16,5,10
+5,4,Brentford FC,BRE,5,2,3,0,10,4,9
+13,5,Leeds United FC,LEE,5,2,3,0,7,3,9
+14,6,Liverpool FC,LIV,5,2,3,0,7,4,9
+9,7,Everton FC,EVE,5,2,3,0,6,3,9
+11,8,Hull City AFC,HUL,5,2,2,1,6,4,8
+17,9,Newcastle United FC,NEW,5,2,2,1,9,9,8
+6,10,Chelsea FC,CHE,5,2,1,2,10,12,7
+12,11,Ipswich Town FC,IPS,5,2,0,3,7,11,6
+16,12,Manchester United FC,MUN,5,1,2,2,8,8,5
+18,13,Nottingham Forest FC,NOT,5,1,2,2,4,5,5
+19,14,Sunderland AFC,SUN,5,1,1,3,6,10,4
+8,15,Crystal Palace FC,CRY,5,1,1,3,6,11,4
+2,16,Aston Villa FC,AVL,5,1,1,3,4,9,4
+4,17,AFC Bournemouth,BOU,5,0,3,2,6,8,3
+7,18,Coventry City FC,COV,5,1,0,4,1,10,3
+10,19,Fulham FC,FUL,5,0,2,3,5,8,2
+20,20,Tottenham Hotspur FC,TOT,5,0,2,3,2,8,2
