@@ -1,3 +1,4 @@
-import crawler
+from crawler import PLdataUpdate
 
-crawler.update_standings()
+run = PLdataUpdate()
+run.update_ALL()
