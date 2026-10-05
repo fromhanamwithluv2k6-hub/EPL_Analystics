@@ -1,4 +1,4 @@
 from crawler import PLdataUpdate
 
 run = PLdataUpdate()
-run.update_ALL()
+run.update_players_profile()

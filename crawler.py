@@ -81,15 +81,13 @@ class PLdataUpdate():
         print('players_stat updated')
     def update_players_profile(self):
         file_csv = self.BASE/'data/players_profile.csv'
-        teams_csv = self.BASE/'data/teams.csv'
         players = self.data['elements']
+        teams_map = {t['id']: t['short_name'] for t in self.data['teams']}
         pos_df = ['None','GK','DF','MF','FW']
-        ref_data = pd.read_csv(teams_csv)
-        teams = ref_data.set_index('Team_id')['Short_name'].to_dict()
         df_profile = pd.DataFrame([{
             'player_id':p['id'],
             'player' : f'{p['first_name']} {p['second_name']}',
-            'team' : teams[p['team']],
+            'team' : teams_map[p['team']],
             'pos': pos_df[int(p['element_type'])],
             'photo_url'  : f"https://resources.premierleague.com/premierleague/photos/players/110x140/p{p['photo'].replace('.jpg', '.png')}"
         }for p in players])
@@ -112,12 +110,12 @@ class PLdataUpdate():
         file_csv = self.BASE/'data/match_stat.csv'
         df = self.understat.read_team_match_stats()
         if not df.empty:
-            '''df_cur = pd.read_csv(file_csv)
-            df_cur.iloc[0:0].to_csv(file_csv,index = False,encoding='utf-8-sig')'''
+            df_cur = pd.read_csv(file_csv)
+            df_cur.iloc[0:0].to_csv(file_csv,index = False,encoding='utf-8-sig')
             cols = ['game_id','home_team_code','away_team_code','home_points',
                         'home_expected_points','home_goals','home_xg','home_ppda',
                         'home_deep_completions','away_points','away_expected_points',
-                        'away_xg','away_ppda','away_deep_completions']
+                        'away_goals','away_xg','away_ppda','away_deep_completions']
             df[cols].to_csv(file_csv,index=False,encoding='utf-8-sig')
             print('match_stat updated')
         else:
