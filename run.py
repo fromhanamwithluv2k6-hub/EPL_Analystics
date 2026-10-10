@@ -1,4 +1,5 @@
 from crawler import PLdataUpdate
+from import_to_db import update_data
 
-run = PLdataUpdate()
-run.update_players_profile()
+run = update_data()
+run.upsert_all()

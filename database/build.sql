@@ -37,7 +37,7 @@ is_result VARCHAR(5),
 
 PRIMARY KEY(game_Id),
 FOREIGN KEY(home_Team) REFERENCES Teams(short_Name),
-FOREIGN KEY(away_Team) REFERENCES Teams(short_Name)
+FOREIGN KEY(away_Team) REFERENCES Teams(short_Name),
 );
 CREATE TABLE Match_stat(
 game_Id INT,
@@ -57,7 +57,8 @@ away_Ppda FLOAT,
 away_deep_completions INT,
 PRIMARY KEY(game_Id),
 FOREIGN KEY(home_Team) REFERENCES Teams(short_Name),
-FOREIGN KEY(away_Team) REFERENCES Teams(short_Name)
+FOREIGN KEY(away_Team) REFERENCES Teams(short_Name),
+FOREIGN KEY(game_Id) REFERENCES Schedule(game_Id)
 );
 CREATE TABLE Player_profile(
 
@@ -99,6 +100,5 @@ threat INT,
 threat_Rank INT,
 ict_index_rank INT,
 PRIMARY KEY(player_Id),
-FOREIGN KEY(player_Id) REFERENCES Player_profile(player_Id),
-FOREIGN KEY(pos) REFERENCES Player_profile(pos)
+FOREIGN KEY(player_Id) REFERENCES Player_profile(player_Id)
 );
