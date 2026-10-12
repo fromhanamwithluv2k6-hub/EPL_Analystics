@@ -37,7 +37,7 @@ is_result VARCHAR(5),
 
 PRIMARY KEY(game_Id),
 FOREIGN KEY(home_Team) REFERENCES Teams(short_Name),
-FOREIGN KEY(away_Team) REFERENCES Teams(short_Name),
+FOREIGN KEY(away_Team) REFERENCES Teams(short_Name)
 );
 CREATE TABLE Match_stat(
 game_Id INT,
