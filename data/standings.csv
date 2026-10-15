@@ -9,13 +9,13 @@ Team_id,Position,Team,Short Name,Played,Won,Draw,Lost,Goals For,Goals Against,Po
 11,8,Hull City AFC,HUL,6,2,3,1,8,6,9
 14,9,Liverpool FC,LIV,6,2,3,1,7,7,9
 12,10,Ipswich Town FC,IPS,6,3,0,3,9,12,9
-17,11,Newcastle United FC,NEW,5,2,2,1,9,9,8
+17,11,Newcastle United FC,NEW,6,2,2,2,10,13,8
 8,12,Crystal Palace FC,CRY,6,2,1,3,9,12,7
 16,13,Manchester United FC,MUN,6,1,3,2,9,9,6
-18,14,Nottingham Forest FC,NOT,6,1,2,3,5,8,5
-2,15,Aston Villa FC,AVL,6,1,2,3,6,11,5
-19,16,Sunderland AFC,SUN,6,1,1,4,6,12,4
-4,17,AFC Bournemouth,BOU,6,0,3,3,7,13,3
-20,18,Tottenham Hotspur FC,TOT,6,0,3,3,3,9,3
-7,19,Coventry City FC,COV,5,1,0,4,1,10,3
+7,14,Coventry City FC,COV,6,2,0,4,5,11,6
+18,15,Nottingham Forest FC,NOT,6,1,2,3,5,8,5
+2,16,Aston Villa FC,AVL,6,1,2,3,6,11,5
+19,17,Sunderland AFC,SUN,6,1,1,4,6,12,4
+4,18,AFC Bournemouth,BOU,6,0,3,3,7,13,3
+20,19,Tottenham Hotspur FC,TOT,6,0,3,3,3,9,3
 10,20,Fulham FC,FUL,6,0,2,4,6,10,2
