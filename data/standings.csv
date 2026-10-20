@@ -1,21 +1,21 @@
 Team_id,Position,Team,Short Name,Played,Won,Draw,Lost,Goals For,Goals Against,Points
-15,1,Manchester City FC,MCI,6,6,0,0,16,5,18
-1,2,Arsenal FC,ARS,6,5,0,1,10,5,15
-3,3,Brighton & Hove Albion FC,BHA,6,4,1,1,18,5,13
-5,4,Brentford FC,BRE,6,2,4,0,12,6,10
-9,5,Everton FC,EVE,6,2,4,0,8,5,10
-6,6,Chelsea FC,CHE,6,3,1,2,15,13,10
-13,7,Leeds United FC,LEE,6,2,3,1,8,5,9
-11,8,Hull City AFC,HUL,6,2,3,1,8,6,9
-14,9,Liverpool FC,LIV,6,2,3,1,7,7,9
-12,10,Ipswich Town FC,IPS,6,3,0,3,9,12,9
-17,11,Newcastle United FC,NEW,6,2,2,2,10,13,8
-8,12,Crystal Palace FC,CRY,6,2,1,3,9,12,7
-16,13,Manchester United FC,MUN,6,1,3,2,9,9,6
-7,14,Coventry City FC,COV,6,2,0,4,5,11,6
-18,15,Nottingham Forest FC,NOT,6,1,2,3,5,8,5
-2,16,Aston Villa FC,AVL,6,1,2,3,6,11,5
-19,17,Sunderland AFC,SUN,6,1,1,4,6,12,4
-4,18,AFC Bournemouth,BOU,6,0,3,3,7,13,3
-20,19,Tottenham Hotspur FC,TOT,6,0,3,3,3,9,3
-10,20,Fulham FC,FUL,6,0,2,4,6,10,2
+15,1,Manchester City FC,MCI,7,7,0,0,19,7,21
+1,2,Arsenal FC,ARS,7,6,0,1,11,5,18
+3,3,Brighton & Hove Albion FC,BHA,7,5,1,1,23,5,16
+6,4,Chelsea FC,CHE,7,4,1,2,17,13,13
+14,5,Liverpool FC,LIV,7,3,3,1,9,8,12
+5,6,Brentford FC,BRE,7,2,4,1,13,8,10
+13,7,Leeds United FC,LEE,7,2,4,1,9,6,10
+9,8,Everton FC,EVE,7,2,4,1,8,7,10
+11,9,Hull City AFC,HUL,7,2,3,2,8,7,9
+12,10,Ipswich Town FC,IPS,7,3,0,4,11,15,9
+17,11,Newcastle United FC,NEW,7,2,2,3,10,14,8
+2,12,Aston Villa FC,AVL,7,2,2,3,7,11,8
+16,13,Manchester United FC,MUN,7,1,4,2,10,10,7
+8,14,Crystal Palace FC,CRY,7,2,1,4,9,17,7
+4,15,AFC Bournemouth,BOU,7,1,3,3,9,13,6
+20,16,Tottenham Hotspur FC,TOT,7,1,3,3,6,10,6
+7,17,Coventry City FC,COV,7,2,0,5,6,14,6
+10,18,Fulham FC,FUL,7,1,2,4,7,10,5
+18,19,Nottingham Forest FC,NOT,7,1,2,4,5,9,5
+19,20,Sunderland AFC,SUN,7,1,1,5,6,14,4
