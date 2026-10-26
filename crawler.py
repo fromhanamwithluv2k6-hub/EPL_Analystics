@@ -11,7 +11,7 @@ class PLdataUpdate():
 
         self.response = requests.get(self.FPL_url)
         self.data = self.response.json()
-
+        self.FIX_CODE = {"BRI": "BHA", "FLH": "FUL", "LED": "LEE"}
         with open(self.BASE/'.gitignore/API_KEY.txt','r',encoding = 'utf-8') as f:
             self.API_KEY = f.readline()
 
@@ -102,7 +102,10 @@ class PLdataUpdate():
             df_cur = pd.read_csv(file_csv)
             df_cur.iloc[0:0].to_csv(file_csv,index = False,encoding='utf-8-sig')
             cols = ['date','game_id','home_team_code','home_goals','away_goals','away_team_code','is_result']
-            df[cols].to_csv(file_csv,index = False,encoding='utf-8-sig')
+            df = df[cols]
+            df['home_team_code'] = df['home_team_code'].replace(self.FIX_CODE)
+            df['away_team_code'] = df['away_team_code'].replace(self.FIX_CODE)
+            df.to_csv(file_csv,index = False,encoding='utf-8-sig')
             print('schedule updated')
         else:
             return print('schedule update failed')
@@ -116,7 +119,10 @@ class PLdataUpdate():
                         'home_expected_points','home_goals','home_xg','home_ppda',
                         'home_deep_completions','away_points','away_expected_points',
                         'away_goals','away_xg','away_ppda','away_deep_completions']
-            df[cols].to_csv(file_csv,index=False,encoding='utf-8-sig')
+            df = df[cols]
+            df['home_team_code'] = df['home_team_code'].replace(self.FIX_CODE)
+            df['away_team_code'] = df['away_team_code'].replace(self.FIX_CODE)
+            df.to_csv(file_csv,index=False,encoding='utf-8-sig')
             print('match_stat updated')
         else:
             return print('match_stat update failed')
