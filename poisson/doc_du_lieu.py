@@ -1,5 +1,3 @@
-"""BƯỚC 1: Đọc dữ liệu từ database và làm sạch.
-Chạy riêng để kiểm tra:  python src/doc_du_lieu.py"""
 import sqlite3
 import pandas as pd
 from config import DB_PATH, FIX_CODE
