@@ -1,4 +1,3 @@
-from crawler import PLdataUpdate
+import numpy as np
 
-run = PLdataUpdate()
-run.update_players_profile()
+print('hello')

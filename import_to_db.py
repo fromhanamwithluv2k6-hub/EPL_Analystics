@@ -157,5 +157,3 @@ class update_data():
         self.upsert_Player_stat_table()
         print("done")
         self.connection.close()
-u = update_data()
-u.upsert_all()
