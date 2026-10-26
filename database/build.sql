@@ -6,7 +6,7 @@ short_Name CHAR(3),
 founded INT,
 home_Stadium VARCHAR(50),
 logo_Url VARCHAR(255),
-PRIMARY KEY(team_Id)
+PRIMARY KEY(short_Name)
 
 );
 CREATE TABLE Standings(
@@ -22,8 +22,8 @@ lost INT,
 goals_For INT,
 goals_Against INT,
 points INT,
-PRIMARY KEY(team_Id),
-FOREIGN KEY (team_Id) REFERENCES Teams(team_Id)
+PRIMARY KEY(short_Name),
+FOREIGN KEY (short_Name) REFERENCES Teams(short_Name)
 
 );
 CREATE TABLE Schedule(
@@ -56,8 +56,6 @@ away_Xg FLOAT,
 away_Ppda FLOAT,
 away_deep_completions INT,
 PRIMARY KEY(game_Id),
-FOREIGN KEY(home_Team) REFERENCES Teams(short_Name),
-FOREIGN KEY(away_Team) REFERENCES Teams(short_Name),
 FOREIGN KEY(game_Id) REFERENCES Schedule(game_Id)
 );
 CREATE TABLE Player_profile(
