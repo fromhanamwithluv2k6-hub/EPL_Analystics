@@ -2,3 +2,6 @@ requests
 pandas
 soccerdata
 football_api
+scikit-learn
+scipy
+numpy

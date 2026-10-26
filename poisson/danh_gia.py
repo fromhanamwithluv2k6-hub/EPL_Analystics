@@ -1,5 +1,4 @@
-"""BƯỚC 4: Đánh giá mô hình. Chia THEO THỜI GIAN (không xáo trộn): trận đầu để học, trận sau để kiểm tra.
-Chạy riêng để kiểm tra:  python src/danh_gia.py"""
+
 import numpy as np
 from sklearn.metrics import log_loss
 from config import TRAIN_RATIO

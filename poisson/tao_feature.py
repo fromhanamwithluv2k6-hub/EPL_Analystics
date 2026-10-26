@@ -1,6 +1,4 @@
-"""BƯỚC 2: Tạo feature cho từng trận.
-Quy tắc quan trọng: chỉ dùng thông tin TRƯỚC trận đấu (không "nhìn trộm" kết quả).
-Chạy riêng để kiểm tra:  python src/tao_feature.py"""
+
 import numpy as np
 import pandas as pd
 from config import FEATURES, WINDOW, ELO_K
@@ -8,14 +6,14 @@ from doc_du_lieu import load_clean_data
 
 
 def avg_last_n(values):
-    """Trung bình WINDOW trận gần nhất (chưa có trận nào thì trả về NaN)."""
+    
     if len(values) == 0:
         return np.nan
     return np.mean(values[-WINDOW:])
 
 
 def update_elo(elo, home, away, home_goals, away_goals):
-    """Cập nhật điểm Elo của 2 đội sau một trận."""
+   
     expected = 1 / (1 + 10 ** ((elo[away] - elo[home]) / 400))    # xác suất nhà thắng theo Elo
     if home_goals > away_goals:
         actual = 1
@@ -28,7 +26,7 @@ def update_elo(elo, home, away, home_goals, away_goals):
 
 
 def build_features(df):
-    """Duyệt các trận theo thứ tự thời gian, tạo feature cho từng trận."""
+    
     teams = set(df["home_Team"]) | set(df["away_Team"])
     elo = {t: 1500 for t in teams}              # mọi đội bắt đầu 1500 điểm
     xg_for = {t: [] for t in teams}             # lịch sử xG tạo ra

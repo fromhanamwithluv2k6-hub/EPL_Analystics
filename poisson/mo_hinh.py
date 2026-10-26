@@ -1,5 +1,4 @@
-"""BƯỚC 3: Mô hình Poisson và các hàm tính xác suất.
-Chạy riêng để kiểm tra:  python src/mo_hinh.py"""
+
 import numpy as np
 from scipy.stats import poisson
 from sklearn.linear_model import PoissonRegressor

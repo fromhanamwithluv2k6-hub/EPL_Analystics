@@ -2,7 +2,7 @@
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent      # thư mục gốc dự án (cha của src)
-DB_PATH = ROOT / "data" / "EPL.db"
+DB_PATH = ROOT / "database" / "EPL.db"
 OUTPUT_DIR = ROOT / "outputs"
 OUTPUT_DIR.mkdir(exist_ok=True)
 

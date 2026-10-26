@@ -1,5 +1,4 @@
-"""BƯỚC 5: Huấn luyện lại bằng TẤT CẢ trận đã đá, dự đoán các trận chưa đá, lưu file cho M2.
-Chạy riêng để kiểm tra:  python src/du_doan.py"""
+
 import numpy as np
 import pandas as pd
 from config import OUTPUT_DIR
