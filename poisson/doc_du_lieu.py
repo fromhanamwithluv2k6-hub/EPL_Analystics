@@ -1,6 +1,6 @@
 import sqlite3
 import pandas as pd
-from config import DB_PATH, FIX_CODE
+from .config import DB_PATH, FIX_CODE
 
 
 def load_clean_data():

@@ -1,10 +1,10 @@
 
 import numpy as np
 from sklearn.metrics import log_loss
-from config import TRAIN_RATIO
-from doc_du_lieu import load_clean_data
-from tao_feature import build_features
-from mo_hinh import train_models, predict_lambda, probs_for_all, brier
+from .config import TRAIN_RATIO
+from .doc_du_lieu import load_clean_data
+from .tao_feature import build_features
+from .mo_hinh import train_models, predict_lambda, probs_for_all, brier
 
 
 def evaluate(played):

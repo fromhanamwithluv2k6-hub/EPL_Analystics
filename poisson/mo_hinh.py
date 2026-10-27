@@ -2,7 +2,7 @@
 import numpy as np
 from scipy.stats import poisson
 from sklearn.linear_model import PoissonRegressor
-from config import FEATURES, ALPHA, MAX_GOALS
+from .config import FEATURES, ALPHA, MAX_GOALS
 
 
 def train_models(train):

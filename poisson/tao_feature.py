@@ -1,8 +1,8 @@
 
 import numpy as np
 import pandas as pd
-from config import FEATURES, WINDOW, ELO_K
-from doc_du_lieu import load_clean_data
+from .config import FEATURES, WINDOW, ELO_K
+from .doc_du_lieu import load_clean_data
 
 
 def avg_last_n(values):

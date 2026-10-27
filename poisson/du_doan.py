@@ -1,10 +1,10 @@
 
 import numpy as np
 import pandas as pd
-from config import OUTPUT_DIR
-from doc_du_lieu import load_clean_data
-from tao_feature import build_features
-from mo_hinh import train_models, predict_lambda, win_draw_lose
+from .config import OUTPUT_DIR
+from .doc_du_lieu import load_clean_data
+from .tao_feature import build_features
+from .mo_hinh import train_models, predict_lambda, win_draw_lose
 
 
 def predict_future(played, future):
